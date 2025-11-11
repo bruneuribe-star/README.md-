@@ -1,0 +1,18 @@
+#!/bin/bash
+
+codones="AUG UAC GCU UAA GCA UAG"
+echo ""
+echo "DESENCRIPTANDO MENSAJE MOLECULAR..."
+echo ""
+echo "Secuencia de codones: $codones"
+echo ""
+
+echo "Separando codones de la secuencia..."
+echo "Primer codón: ${codones:0:3}"
+echo "Último codones: ${codones: -3}"
+echo ""
+
+echo "MENSAJE DECODIFICACO EXITOSAMENTE"
+codones="${codones/AUG/INICIO}"
+codones="${codones/UAG/FIN}"
+echo "Mensaje decodificado: $codones" 
