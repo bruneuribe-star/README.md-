@@ -1,0 +1,23 @@
+#!/bin/bash
+
+adn="AAACGCGGCCTTTCCAACGGC"
+echo ""
+
+echo "INICIANDO PROTOCOLO DE CONVERSIÓN..."
+echo ""
+echo "Analizando secuencia de ADN infiltrada..."
+echo "Secuencia de ADN original: $adn"
+echo ""
+
+echo "Ejecutando conversión molecular..."
+echo "ADN → ARN"
+arn="${adn//T/U}"
+echo "Secuencia de ARN resultante: $arn" 
+echo ""
+
+echo "MISIÓN COMPLETADA - ARN RECUPERADO"
+echo "" 
+conteo_adn=$(echo "AAACGCGGCCTTTCCAACGGC" |grep -o "T"|wc -l)
+echo "Cant. de T en ADN resultante: $conteo_adn"
+conteo_arn=$(echo "$arn" |grep -o "U"|wc -l) 
+echo "Cant. de U en ARN resultante: $conteo_arn"
