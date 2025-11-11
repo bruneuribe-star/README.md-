@@ -1,0 +1,17 @@
+#!/bin/bash
+
+secuencia="MALWMRLLPLLALLALWGPDPAAAFVNQHLCGSHLVEALYLVCGERGFFYTPKTRREAEDLQVGQVELGGGPGAGSLQPLALEGSLQKRGIVEQCCTSICSLYQLENYCN"
+
+echo ""
+echo "Bienvenido agente u20231g864"
+echo ""
+echo "Tu identidad ha sido verificada."
+echo "La misión comienza ahora."
+echo ""
+
+echo "=== INICIANDO ANÁLISIS DE SECUENCIA COMPROMETIDA...  ==="
+echo "Secuencia Completa: $secuencia"
+echo "Longitud total de la secuencia: ${#secuencia}" 
+echo "Posible región comprometida: ${secuencia:0:10}"
+echo "Últimos 10 aminoácidos: ${secuencia: -10}"
+ 
